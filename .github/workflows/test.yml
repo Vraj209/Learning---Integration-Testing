@@ -24,6 +24,9 @@ jobs:
 
       - name: Copy .env.example to .env
         run: cp ./.env.example ./.env
+     
+      - name: give permission to script folder
+        run: chmod +x script/*
 
       - name: Run integration script
         run: npm run test:integration
